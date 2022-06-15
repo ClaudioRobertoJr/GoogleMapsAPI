@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="javascript.js"></script>
+    <script async defer
+        src="###CHAVEAPI###&libraries=drawing&callback=initMap&">
+        </script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+
+
+        <div class="divLista">
+            <h4>Formas Originais</h4>
+            <select id="ListaFormaOriginal" class="lista">
+                <option>Nenhuma</option>
+            </select>
+
+            <h4>Formas a Copiar</h4>
+            <select id="ListaFormaCopia" class="lista">
+                <option id="Copia-0">Nenhuma</option>
+            </select>
+
+            <h4>Formas Coladas</h4>
+            <select id="ListaFormaColada" class="lista">
+                <option id="Colada-0">Nenhuma</option>
+            </select>
+
+        </div>
+
+        <div id="googleMap"></div>
+
+    </div>
+
+
+    <div class="button">
+    <button class="salvar" onclick="selecionaOriginal()"> Salvar Forma</button>
+    <button class="salvar" onclick="selecionaCopia()">Colar Forma</button>
+    <button class="remover" onclick="removeFormaOriginal()">Remover Forma Original</button>
+    <button class="remover" onclick="removeFormaCopia()">Remover da Lista de Copia</button>
+    <button class="remover" onclick="removeFormaColada()">Remover Forma Colada</button>
+    <button class="remover" onclick="limparFormasOriginais()">Limpar Todas Formas Originais</button>
+    <button class="remover" onclick="limparFormasCopia()">Limpar Lista inteira de Copia</button>
+    <button class="remover" onclick="limparFormasColadas()">Limpar todas formas Coladas</button>
+</div>
+
+
+
+</body>
+
+</html>
