@@ -12,7 +12,6 @@ function initMap() {
         zoom: 14,
         center: new google.maps.LatLng(-22.10452492070399, -50.211188118378004),
         scrollwhell: false,
-        zoom: 14,
         maptypeId: google.maps.MapTypeId.ROADMAP
     });
 
@@ -44,7 +43,6 @@ function initMap() {
             clickable: false,
             editable: true,
             zIndex: 1,
-            editable: true,
             draggable: true,
             strokeColor: '#9fdaae',
         },
@@ -55,7 +53,6 @@ function initMap() {
             clickable: false,
             editable: true,
             zIndex: 1,
-            editable: true,
             draggable: false,
             strokeColor: '#9fdaae',
         },
@@ -66,7 +63,6 @@ function initMap() {
             clickable: false,
             editable: true,
             zIndex: 1,
-            editable: true,
             draggable: true,
             strokeColor: '#9fdaae',
         },
@@ -77,7 +73,6 @@ function initMap() {
             clickable: false,
             editable: true,
             zIndex: 1,
-            editable: true,
             draggable: true,
             strokeColor: '#9fdaae',
         },
@@ -93,50 +88,31 @@ function initMap() {
             const center = event.overlay.getCenter();
             const radius = event.overlay.getRadius();
             const type = event.type;
-            const objCircle = {
-                center: center,
-                radius: radius,
-                type: type,
-            }
+           
 
             
         }
         if (event.type == google.maps.drawing.OverlayType.POLYGON) {
             const path = event.overlay.getPath().getArray();
             const type = event.type;
-            const objPolygon = {
-                path: path,
-                type: type,
-            }
+           
             
         }
         if (event.type == google.maps.drawing.OverlayType.POLYLINE) {
             const path = event.overlay.getPath().getArray();
-            console.log(path);
             const type = event.type;
-            const objPolyline = {
-                path: path,
-                type: type,
-            }
+           
             
         }
         if (event.type == google.maps.drawing.OverlayType.RECTANGLE) {
             const bounds = event.overlay.getBounds();
             const type = event.type;
-            const objRectangle = {
-                bounds: bounds,
-                type: type,
-            }
-            
+                      
         }
         if (event.type == google.maps.drawing.OverlayType.MARKER) {
             const position = event.overlay.getPosition();
             const type = event.type;
-            const objMarker = {
-                position: position,
-                type: type,
-            }
-            
+                      
         }
 
         listaFormaOriginal();
