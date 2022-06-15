@@ -84,36 +84,7 @@ function initMap() {
 
     google.maps.event.addListener(drawingManager, 'overlaycomplete', function (event) {
         formaOriginal.push(event);
-        if (event.type == google.maps.drawing.OverlayType.CIRCLE) {
-            const center = event.overlay.getCenter();
-            const radius = event.overlay.getRadius();
-            const type = event.type;
-           
-
-            
-        }
-        if (event.type == google.maps.drawing.OverlayType.POLYGON) {
-            const path = event.overlay.getPath().getArray();
-            const type = event.type;
-           
-            
-        }
-        if (event.type == google.maps.drawing.OverlayType.POLYLINE) {
-            const path = event.overlay.getPath().getArray();
-            const type = event.type;
-           
-            
-        }
-        if (event.type == google.maps.drawing.OverlayType.RECTANGLE) {
-            const bounds = event.overlay.getBounds();
-            const type = event.type;
-                      
-        }
-        if (event.type == google.maps.drawing.OverlayType.MARKER) {
-            const position = event.overlay.getPosition();
-            const type = event.type;
-                      
-        }
+       
 
         listaFormaOriginal();
     });
